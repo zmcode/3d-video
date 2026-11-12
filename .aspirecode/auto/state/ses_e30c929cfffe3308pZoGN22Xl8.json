@@ -1,0 +1,69 @@
+{
+  "session_id": "ses_e30c929cfffe3308pZoGN22Xl8",
+  "task_id": "auto-ses_e30c929cfffe3308pZoGN22Xl8",
+  "status": "finished",
+  "state": "done",
+  "task_type": "unknown",
+  "selected_agents": [
+    "ac-architect",
+    "ac-code-reviewer"
+  ],
+  "selected_models": {
+    "ac-architect": {
+      "providerID": "aspire-coding-shenzhen",
+      "modelID": "deepseek-v4-flash"
+    },
+    "ac-code-reviewer": {
+      "providerID": "aspire-coding-shenzhen",
+      "modelID": "deepseek-v4-flash"
+    }
+  },
+  "route_cache": {
+    "ses_e30c929cfffe3308pZoGN22Xl8:task-type:ac-architect": {
+      "agent": "ac-architect",
+      "tier": "LOW",
+      "task_id": "auto-ses_e30c929cfffe3308pZoGN22Xl8",
+      "route_id": "task-type:ses_e30c929cfffe3308pZoGN22Xl8",
+      "cache_key": "ses_e30c929cfffe3308pZoGN22Xl8:task-type:ac-architect",
+      "context_digest": "auto-ses_e30c929cfffe3308pZoGN22Xl8",
+      "model": {
+        "providerID": "aspire-coding-shenzhen",
+        "modelID": "deepseek-v4-flash"
+      },
+      "reason": "default subagent route modelId=deepseek-v4-flash source=remote; health=stale_available",
+      "repair_round": 0,
+      "hits": 0,
+      "updated_at": "2026-11-12T10:13:29.777Z"
+    },
+    "ses_e30c929cfffe3308pZoGN22Xl8:task-type:ac-code-reviewer": {
+      "agent": "ac-code-reviewer",
+      "tier": "LOW",
+      "task_id": "auto-ses_e30c929cfffe3308pZoGN22Xl8",
+      "route_id": "task-type:ses_e30c929cfffe3308pZoGN22Xl8",
+      "cache_key": "ses_e30c929cfffe3308pZoGN22Xl8:task-type:ac-code-reviewer",
+      "context_digest": "auto-ses_e30c929cfffe3308pZoGN22Xl8",
+      "model": {
+        "providerID": "aspire-coding-shenzhen",
+        "modelID": "deepseek-v4-flash"
+      },
+      "reason": "default subagent route modelId=deepseek-v4-flash source=remote; health=stale_available",
+      "repair_round": 0,
+      "hits": 0,
+      "updated_at": "2026-11-12T10:40:49.372Z"
+    }
+  },
+  "input_artifacts": [],
+  "handoff_artifacts": [],
+  "verification_artifacts": [],
+  "repair_round": 0,
+  "quality_contract": {
+    "target_map_required": true,
+    "completion_contract_required": true,
+    "verifier_required": true,
+    "quality_gate_required": true,
+    "max_repair_rounds": 2
+  },
+  "failures": [],
+  "final_status": "pass",
+  "updated_at": "2026-11-12T10:40:49.375Z"
+}

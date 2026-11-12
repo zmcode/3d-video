@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Video Factory · 程序化 3D 解说</title>
+<style>
+  :root { color-scheme: dark; --ink:#111417; --bone:#e8e4da; --steel:#8d9aa3; --signal:#ffb347; }
+  html, body { height: 100%; margin: 0; background: var(--ink); }
+  body { font: 12px/1.5 ui-monospace, Menlo, Consolas, monospace; color: var(--bone); overflow: hidden; }
+  #view { display: block; width: 100vw; height: 100vh; }
+  #hud {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    display: flex; gap: 10px; align-items: center; padding: 10px 14px;
+    background: linear-gradient(to top, rgba(11,13,15,.92), rgba(11,13,15,.55));
+    border-top: 1px solid rgba(232,228,218,.14);
+  }
+  button {
+    background: rgba(232,228,218,.08); color: var(--bone); border: 1px solid rgba(232,228,218,.22);
+    border-radius: 4px; padding: 6px 12px; font: inherit; cursor: pointer;
+  }
+  button:hover { background: rgba(232,228,218,.16); }
+  button.primary { border-color: var(--signal); color: var(--signal); }
+  button:disabled { opacity: .45; cursor: default; }
+  input[type=range] { flex: 1; accent-color: var(--signal); }
+  #time { min-width: 132px; text-align: right; color: var(--steel); }
+  #status { position: fixed; top: 12px; left: 14px; z-index: 10; color: var(--steel); pointer-events: none; }
+  #status b { color: var(--bone); font-weight: 600; }
+  #msg { position: fixed; top: 40px; left: 14px; z-index: 10; color: var(--signal); max-width: 60ch; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div id="status"></div>
+<div id="msg"></div>
+<div id="hud">
+  <button id="play">暂停</button>
+  <input id="scrub" type="range" min="0" max="1000" value="0" />
+  <span id="time">0.000s</span>
+  <button id="export" class="primary">导出 MP4</button>
+  <button id="still">存当前帧 PNG</button>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

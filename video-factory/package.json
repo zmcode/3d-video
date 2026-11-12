@@ -1,0 +1,22 @@
+{
+  "name": "video-factory",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "description": "程序化 3D 解说视频工厂 - 风格化 NPR + 场景 DSL + WebCodecs 直出",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --port 4173 --strictPort",
+    "verify": "node tools/verify.mjs"
+  },
+  "dependencies": {
+    "mp4-muxer": "^5.0.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "typescript": "5.4.5",
+    "vite": "4.5.14"
+  }
+}
